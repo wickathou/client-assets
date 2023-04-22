@@ -1,0 +1,73 @@
+:root {
+  --w-c-i: 300px;
+  --n: 1.2;
+}
+
+.carousel {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.carousel-item {
+  width: 300px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  animation: carousel-animation 30s infinite;
+}
+
+.carousel :nth-child(1) {
+  left: 0px;
+}
+
+.carousel :nth-child(2) {
+  left: calc(var(--w-c-i) * var(--n));
+}
+
+.carousel :nth-child(3) {
+  left: calc(var(--w-c-i) * calc(var(--n)*2));
+}
+
+.carousel :nth-child(4) {
+  left: calc(var(--w-c-i) * calc(var(--n)*3));
+}
+
+.carousel :nth-child(5) {
+  left: calc(var(--w-c-i) * calc(var(--n)*4));
+}
+
+.carousel :nth-child(6) {
+  left: calc(var(--w-c-i) * calc(var(--n)*5));
+}
+
+.carousel :nth-child(7) {
+  left: calc(var(--w-c-i) * calc(var(--n)*6));
+}
+
+.carousel :nth-child(8) {
+  left: calc(var(--w-c-i) * calc(var(--n)*7));
+}
+
+@keyframes carousel-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  40% {
+    transform: translateX(-200%);
+  }
+  60% {
+    transform: translateX(-300%);
+  }
+  80% {
+    transform: translateX(-400%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
